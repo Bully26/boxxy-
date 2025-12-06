@@ -4,14 +4,15 @@ const valid_token = ["xyz-123-abc"]
 
 const auth = (req, res, next) => {
 
-    const { codeboxRequest: data } = req.body;
-
-    for (const token of valid_token) {
-        if (token == data.auth_token) {
-            return next();
-        }
+     
+     
+    // some kind of check 
+    
+    // some condition here pass on
+    if(true)
+    {
+        next();
     }
-    console.log(data.auth_token);
 
     return res.status(401).json({ message: "Unauthorized" });
 

@@ -27,3 +27,15 @@ information will be sended to client for aclknowledgement
      // this task will be used to identify if the task is completed or not 
 }
 
+
+
+So what will the entry point do 
+
+- get api to run code from user
+- it will create an  job uid for the code
+- send this job uid to message queue
+- update state of job by uid in the quick cache
+- check pooling req of user
+- check again quick cache
+- if the code is there in the dynamo db fetch it
+- serve to the user
